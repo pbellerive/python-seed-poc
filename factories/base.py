@@ -12,7 +12,7 @@ class BaseFactory(ABC):
     @abstractmethod
     def create(self):
         pass
-    
+
     def count(self, quantity):
         self.quantity = quantity
         return self

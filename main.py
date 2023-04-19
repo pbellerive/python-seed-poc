@@ -5,7 +5,6 @@ import os
 def migrate():
     print("migrate")
     os.system('alembic upgrade head')
-    
 
 def reset():
     print("Begin reset")
@@ -19,16 +18,15 @@ def refresh():
     migrate()
     dbSeed()
     print("End refresh ")
-    
 
 def dbSeed():
     print("seed")
     seedDatabase()
 
 def main(arguments):
-    if (len(arguments) == 1): 
+    if (len(arguments) == 1):
         print("argument manquant")
-        return 
+        return
 
     if arguments[1] == "--migrate":
         migrate()
@@ -38,7 +36,7 @@ def main(arguments):
         refresh()
     elif arguments[1] == "--seed":
         dbSeed()
-    
+
 
 # Using the special variable
 # __name__

@@ -1,6 +1,12 @@
 from factories import UserFactory
 
-class UserSeeder : 
+class UserSeeder :
     def execute(self):
         print('execute user seed')
-        (UserFactory.UserFactory()).count(60).create([])
+        (UserFactory.UserFactory()).create(['name': 'Patrick'])
+        (UserFactory.UserFactory()).create(['name': 'Patricia'])
+        (UserFactory.UserFactory()).create([])
+        (UserFactory.UserFactory()).create([])
+        (UserFactory.UserFactory()).create([])
+        (UserFactory.UserFactory()).create([])
+        (UserFactory.UserFactory()).create([])
